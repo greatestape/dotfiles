@@ -1,0 +1,8 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Sam Bull
+	useConfigOnly = true
+[core]
+	excludesfile = ~/.gitignore
+[init]
+	templatedir = ~/.git_template
