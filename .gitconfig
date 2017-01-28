@@ -3,6 +3,6 @@
 	name = Sam Bull
 	useConfigOnly = true
 [core]
-	excludesfile = ~/.gitignore
+	excludesfile = ~/.git_global_ignore
 [init]
 	templatedir = ~/.git_template
