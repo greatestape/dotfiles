@@ -1,9 +1,0 @@
-# Ignore everything
-*
-
-# But not these files...
-!.oh-my-zsh
-!.zshrc
-!.gitignore
-!.irssi
-!.tmux.conf
