@@ -59,7 +59,7 @@ ZSH_THEME=pure
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-plugins=(git python async virtualenvwrapper zsh-syntax-highlighting)
+plugins=(git python async virtualenvwrapper zsh-syntax-highlighting osx)
 
 source $ZSH/oh-my-zsh.sh
 
