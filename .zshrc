@@ -1,5 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export PATH="/Applications/GAMS24.8/sysdir:$PATH:$HOME/anaconda/bin"
+export PATH="/Applications/GAMS24.8/sysdir:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
