@@ -60,7 +60,7 @@ ZSH_THEME=pure
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+VIRTUALENVWRAPPER_PYTHON=$HOME/.pyenv/shims/python
 plugins=(git python async virtualenvwrapper zsh-syntax-highlighting osx)
 
 source $ZSH/oh-my-zsh.sh
