@@ -106,3 +106,27 @@ alias vim="/usr/local/bin/vim"
 
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+export DKR_REGISTRY=592047444820.dkr.ecr.us-east-1.amazonaws.com
+
+devops () {
+    if [[ $VIRTUAL_ENV ]]; then deactivate; fi
+    cd "/Users/sbull/opusone/gridos/devops" &&
+    if [[ ! -d venv ]]; then
+        bin/bootstrap-devops
+    fi &&
+    source venv/bin/activate &&
+    if [[ ! -e $DEVOPS_HOME/etc/aws.conf ]]; then
+        echo "Please configure your $DEVOPS_HOME/etc/aws.conf first!"
+    else
+        local stmts
+        stmts=$(set -o pipefail; aws-mfa | tee /dev/stderr) &&
+        eval "$stmts" &&
+        stmts=($(aws ecr get-login --no-include-email)) &&
+        echo "${stmts[-2]}"          | docker login -u AWS --password-stdin "${stmts[-1]}"
+    fi
+    local rc=$?
+    if [[ ${1:-} ]]; then
+        cd "$1" || return $?
+    fi
+    return $rc
+}
