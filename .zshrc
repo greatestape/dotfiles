@@ -130,3 +130,6 @@ devops () {
     fi
     return $rc
 }
+
+# added by travis gem
+[ -f /Users/sbull/.travis/travis.sh ] && source /Users/sbull/.travis/travis.sh
