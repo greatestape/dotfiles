@@ -103,3 +103,6 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 alias vim="/usr/local/bin/vim"
+
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
