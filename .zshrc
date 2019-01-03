@@ -10,7 +10,7 @@ export ZSH=$HOME/.oh-my-zsh
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #
-ZSH_THEME=pure
+ZSH_THEME=refined
 # ZSH_THEME=robbyrussell
 #
 # export TERM="xterm-256color"
@@ -99,7 +99,7 @@ unsetopt share_history
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 if command -v pyenv 1>/dev/null 2>&1; then
-    eval "$(pyenv init -)"
+    eval "$(pyenv init - zsh)"
 fi
 
 alias vim="/usr/local/bin/vim"
